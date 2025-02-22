@@ -37,10 +37,10 @@ public class Hello {
       System.out.println(response.body());
 
       Class.forName("org.hsqldb.jdbc.JDBCDriver");
-      var conn = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "SA", "");
+      var conn = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "SA", "hhhh");
 
       try (var stat = conn.createStatement()) {
-        var rs = stat.executeQuery("select (1+1) FROM   INFORMATION_SCHEMA.TABLES");// + new Random(12345).nextInt() + " + " + argv[0]);
+        var rs = stat.executeQuery("select (1+1) FROM INFORMATION_SCHEMA.TABLES");// + new Random(12345).nextInt() + " + " + argv[0]);
         while (rs.next()) {
           System.out.println(rs.getInt(1));
         }
