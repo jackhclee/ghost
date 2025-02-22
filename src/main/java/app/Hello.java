@@ -37,7 +37,7 @@ public class Hello {
       System.out.println(response.body());
 
       Class.forName("org.hsqldb.jdbc.JDBCDriver");
-      var conn = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "SA", "hhhh");
+      var conn = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "SA", "");
 
       try (var stat = conn.createStatement()) {
         var rs = stat.executeQuery("select (1+1) FROM INFORMATION_SCHEMA.TABLES");// + new Random(12345).nextInt() + " + " + argv[0]);
