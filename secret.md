@@ -1,0 +1,4 @@
+This is a AWS secret
+
+
+ASIAY34FZKBOKMUTVV7A
